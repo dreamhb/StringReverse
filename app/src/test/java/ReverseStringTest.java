@@ -1,18 +1,18 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
-import org.junit.BeforeClass;
+import org.junit.Before;
 
 public class ReverseStringTest{
 
-    //private static StringReverse stringReverse;
+    private StringReverse stringReverse;
 
-    //@BeforeClass
-    //public void init(){
-    //}
+    @Before
+    public void init(){
+        stringReverse = new StringReverse();
+    }
 
     @Test 
     public void recursionTest(){
-        StringReverse stringReverse = new StringReverse();    
         assertEquals("abcdef", stringReverse.recursionVersion("fedcba"));
     } 
 }
